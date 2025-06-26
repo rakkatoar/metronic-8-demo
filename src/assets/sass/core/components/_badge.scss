@@ -71,5 +71,6 @@
     .badge-light-#{$name} {
         color: var(--#{$prefix}#{$name});
         background-color: var(--#{$prefix}#{$name}-light);
+        border-color: var(--#{$prefix}#{$name}-clarity) !important;
     }    
 }

@@ -1,0 +1,1409 @@
+<div class="card card-custom p-5 rounded-4">
+  <div class="d-flex justify-content-between align-item-start px-5 pt-5 flex-column flex-md-row">
+    <nav aria-label="breadcrumb" class="mb-4 mb-md-0">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#" class="text-gray-700 text-hover-primary"
+            >Venue accounts</a
+          >
+        </li>
+        <li class="breadcrumb-item text-dark fw-bolder" aria-current="page">
+          The Ritz Hotel
+        </li>
+      </ol>
+    </nav>
+    <div class="d-flex justify-content-between align-item-start gap-5">
+      <div
+        class="btn btn-icon btn-active-light-primary btn-custom position-relative"
+        [ngClass]="'w-30px h-30px w-md-40px h-md-40px'"
+        id="kt_drawer_chat_toggle"
+      >
+        <span
+          [inlineSVG]="'./assets/media/icons/custom/magnifier002.svg'"
+          class="svg-icon opacity-25"
+          [ngClass]="'svg-icon-1'"
+        ></span>
+      </div>
+      <div
+        class="btn btn-icon btn-active-light-primary btn-custom position-relative"
+        [ngClass]="'w-30px h-30px w-md-40px h-md-40px'"
+        id="kt_drawer_chat_toggle"
+      >
+        <span
+          [inlineSVG]="'./assets/media/icons/custom/notification001.svg'"
+          class="svg-icon"
+          [ngClass]="'svg-icon-1'"
+        ></span>
+      </div>
+      <div
+        class="btn btn-icon btn-active-light-primary btn-custom position-relative"
+        [ngClass]="'w-30px h-30px w-md-40px h-md-40px'"
+        id="kt_drawer_chat_toggle"
+      >
+        <span
+          [inlineSVG]="'./assets/media/icons/custom/message001.svg'"
+          class="svg-icon"
+          [ngClass]="'svg-icon-1'"
+        ></span>
+      </div>
+      <div
+        class="btn btn-icon btn-active-light-primary btn-custom position-relative"
+        [ngClass]="'w-30px h-30px w-md-40px h-md-40px'"
+        id="kt_drawer_chat_toggle"
+      >
+        <span
+          [inlineSVG]="'./assets/media/icons/custom/element001.svg'"
+          class="svg-icon"
+          [ngClass]="'svg-icon-1'"
+        ></span>
+      </div>
+      <div class="d-flex flex-row gap-5 gap-md-0 flex-md-column align-items-center">
+        <div>
+          <div
+            class="symbol symbol-35px symbol-circle"
+            style="border: 1px solid #17c653"
+          >
+            <img alt="Pic" src="./assets/media/avatars/300-1.jpg" />
+          </div>
+        </div>
+        <div
+          class="btn btn-icon btn-active-light-primary btn-custom position-relative"
+          [ngClass]="'w-30px h-30px w-md-40px h-md-40px'"
+          id="kt_drawer_chat_toggle"
+        >
+          <span
+            [inlineSVG]="'./assets/media/icons/custom/leftArrow001.svg'"
+            class="svg-icon"
+            [ngClass]="'svg-icon-1'"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- begin::Header -->
+  <div class="card-header card-header-stretch overflow-auto">
+    <ul
+      class="nav nav-stretch nav-line-tabs fw-bold border-transparent flex-nowrap"
+      role="tablist"
+    >
+      <li class="nav-item">
+        <a
+          class="nav-link cursor-pointer text-hover-primary"
+          [ngClass]="{ active: activeTab === 'Dashboard' }"
+          (click)="setActiveTab('Dashboard')"
+          role="tab"
+        >
+          Dashboard
+          <i class="fa fa-chevron-down fs-5 ps-2"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link cursor-pointer text-hover-primary"
+          [ngClass]="{ active: activeTab === 'BookingRecords' }"
+          (click)="setActiveTab('BookingRecords')"
+          role="tab"
+        >
+          Booking Records
+          <i class="fa fa-chevron-down fs-5 ps-2"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- end::Header -->
+  <!-- begin::Body -->
+  <div class="card-body">
+    <div class="tab-content pt-3">
+      <!-- begin::Header -->
+      <div class="tab-pane" [ngClass]="{ active: activeTab === 'Dashboard' }">
+        <div class="row flex-column flex-md-row">
+          <div class="col">
+            <h3>The Ritz Hotel</h3>
+            <p class="text-gray-700">WAYS Chauffeur Bookings Dashboard</p>
+          </div>
+          <div class="col text-center text-md-left">
+            <button
+              class="btn btn-sm btn-primary min-width"
+              id="kt_drawer_chat_toggle"
+            >
+              Book By Destination
+            </button>
+          </div>
+          <div class="col text-center text-md-left my-4 my-md-0">
+            <button
+              class="btn btn-sm btn-primary min-width"
+              id="kt_drawer_chat_toggle"
+            >
+              Book By Hour
+            </button>
+          </div>
+        </div>
+
+        <div class="row border rounded rounded-4 mb-5">
+          <!-- begin::Header -->
+          <div class="card-header border-0 pt-5 px-5">
+            <h4 class="card-title align-items-start flex-column">
+              <span class="card-label fw-bold mb-1">Booking Requests</span>
+            </h4>
+            <div class="card-toolbar my-0 w-100 w-md-auto">
+              <form class="w-100 position-relative" autoComplete="off">
+                <span
+                  [inlineSVG]="'./assets/media/icons/custom/magnifier002.svg'"
+                  class="svg-icon fs-2 position-absolute top-50 ms-4 translate-middle-y"
+                  [ngClass]="'svg-icon-1'"
+                ></span>
+                <input
+                  type="text"
+                  class="form-control ps-12 pe-4 rounded-5 fs-6"
+                  name="search"
+                  placeholder="Search Venue Bookings"
+                />
+              </form>
+            </div>
+          </div>
+          <!-- end::Header -->
+          <!-- begin::Body -->
+          <div class="card-body px-0 pt-3 pb-0">
+            <div class="d-flex flex-stack flex-wrap">
+              <div
+                class="d-flex w-100 justify-content-between py-1 border-top py-5 flex-column flex-md-row"
+              >
+                <div class="d-flex align-items-center ps-md-5 mx-auto mx-md-0">
+                  <span class="text-gray-700">Show </span>
+                  <select
+                    class="form-select w-65px form-select-sm mx-4 border border-1 border-gray-300"
+                  >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                  </select>
+                  <span class="text-gray-700"> per page</span>
+                </div>
+                <div class="d-flex align-items-center pe-md-5 flex-column flex-md-row">
+                  <span class="text-gray-700 me-2 my-4 my-md-0">1-10 of 52</span>
+
+                  <ul class="pagination">
+                    <li class="page-item previous disabled">
+                      <a class="page-link cursor-pointer">
+                        <i class="fa fa-left-long"></i>
+                      </a>
+                    </li>
+
+                    <li class="page-item active">
+                      <a class="page-link cursor-pointer"> 1 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 2 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 3 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 4 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 5 </a>
+                    </li>
+
+                    <li class="page-item next">
+                      <a class="page-link cursor-pointer">
+                        <i class="fa fa-right-long"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- begin::Table container -->
+              <div class="table-responsive w-100">
+                <!-- begin::Table -->
+                <table
+                  class="table table-bordered table-row-gray-100 align-middle gs-0 gy-3 table-hover mb-0"
+                >
+                  <!-- begin::Table head -->
+                  <thead>
+                    <tr class="text-gray-700">
+                      <th class="w-50px border-left-0"></th>
+                      <th class="w-90px border-right-0 fw-normal text-gray-700">Date</th>
+                      <th class="w-70px border-left-0 fw-normal text-gray-700">Time</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Pickup</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Drop off</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Passenger</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Amount Charged</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Status</th>
+                      <th class="min-w-100px pe-3 border-right-0 fw-normal text-gray-700">
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <!-- end::Table head -->
+                  <!-- begin::Table body -->
+                  <tbody>
+                    <tr>
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">15:30</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          Terminal 5 Heathrow
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap">
+                          Picadilly ,London SW1A 1AA
+                        </span>
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        John Travalta
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £12.00
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center"
+                          >Completed</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">17:45</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        Jimmy Hendric
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £12.00
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-warning border border-2 fw-medium w-70px justify-content-center"
+                          >Pending</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">17:45</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        Kate Mass
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £23.45
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-danger border border-2 fw-medium w-70px justify-content-center"
+                          >Cancelled</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-bottom-0">
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">06:00</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          Terminal 5 Heathrow
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        Bjorn Born
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £1234.00
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-primary border border-2 fw-medium w-70px justify-content-center"
+                          >Finalized</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <!-- end::Table body -->
+                </table>
+                <!-- end::Table -->
+              </div>
+              <!-- end::Table container -->
+            </div>
+            <!-- begin::Body -->
+          </div>
+        </div>
+        <div class="row border rounded rounded-4 mb-5">
+          <div class="card-header p-5 d-flex flex-stack w-100">
+            <h4 class="mb-0">FAQ</h4>
+            <i class="fa fa-minus opacity-25 fs-6"></i>
+          </div>
+          <div class="card-body px-5 py-3">
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-0')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-0"
+                aria-expanded="true"
+                aria-controls="collapse-0"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    What is
+                    <span class="text-primary fw-medium"
+                      >Book by Destination</span
+                    >
+                    or
+                    <span class="text-primary fw-medium">Book by Hour</span> ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-0" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-1')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-1"
+                aria-expanded="true"
+                aria-controls="collapse-1"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    How can i receive updates for my booking requests ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-1" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-2')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-2"
+                aria-expanded="true"
+                aria-controls="collapse-2"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">How can i make changes to my booking ?</p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-2" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-3')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-3"
+                aria-expanded="true"
+                aria-controls="collapse-3"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">How can i contact you ?</p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-3" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-4')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-4"
+                aria-expanded="true"
+                aria-controls="collapse-4"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    Are we going to be charged for any cancellation ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-4" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-5')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-5"
+                aria-expanded="true"
+                aria-controls="collapse-5"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    Can I extend my Booking per Hour ,if yes i will get a
+                    dsscount ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-5" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row flex-column flex-md-row gap-7">
+          <div class="col card px-0">
+            <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
+              <div>
+                <h5>Questions?</h5>
+                <p>Visit our Help Center for detailed assistance on Bookings ,Payments and more information. </p>
+              </div>
+              <span
+                [inlineSVG]="'./assets/media/icons/custom/footer001.svg'"
+                class="w-100 text-center"
+              ></span>
+            </div>
+            <div class="card-footer px-5 py-3 text-center">
+              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary">Go to Help Center</span>
+            </div>
+          </div>
+          <div class="col card px-0">
+            <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
+              <div>
+                <h5>Contact Support</h5>
+                <p>Need assistance? Contact our support team for prompt, personalized help your queries & concerns.</p>
+              </div>
+              <span
+                [inlineSVG]="'./assets/media/icons/custom/footer002.svg'"
+                class="w-100 text-center"
+              ></span>
+            </div>
+            <div class="card-footer px-5 py-3 text-center">
+              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary">Contact Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end::Header -->
+      <!-- begin::Header -->
+      <div
+        class="tab-pane"
+        [ngClass]="{ active: activeTab === 'BookingRecords' }"
+      >
+        <div class="row flex-column flex-md-row">
+          <div class="col">
+            <h3>The Ritz Hotel</h3>
+            <p class="text-gray-700">WAYS Chauffeur Bookings Dashboard</p>
+          </div>
+          <div class="col text-center text-md-left">
+            <button
+              class="btn btn-sm btn-primary min-width"
+              id="kt_drawer_chat_toggle"
+            >
+              Book By Destination
+            </button>
+          </div>
+          <div class="col text-center text-md-left my-4 my-md-0">
+            <button
+              class="btn btn-sm btn-primary min-width"
+              id="kt_drawer_chat_toggle"
+            >
+              Book By Hour
+            </button>
+          </div>
+        </div>
+
+        <div class="row border rounded rounded-4 mb-5">
+          <!-- begin::Header -->
+          <div class="card-header border-0 pt-5 px-5">
+            <h4 class="card-title align-items-start flex-column">
+              <span class="card-label fw-bold mb-1">Booking Requests</span>
+            </h4>
+            <div class="card-toolbar my-0 w-100 w-md-auto">
+              <form class="w-100 position-relative" autoComplete="off">
+                <span
+                  [inlineSVG]="'./assets/media/icons/custom/magnifier002.svg'"
+                  class="svg-icon fs-2 position-absolute top-50 ms-4 translate-middle-y"
+                  [ngClass]="'svg-icon-1'"
+                ></span>
+                <input
+                  type="text"
+                  class="form-control ps-12 pe-4 rounded-5 fs-6"
+                  name="search"
+                  placeholder="Search Venue Bookings"
+                />
+              </form>
+            </div>
+          </div>
+          <!-- end::Header -->
+          <!-- begin::Body -->
+          <div class="card-body px-0 pt-3 pb-0">
+            <div class="d-flex flex-stack flex-wrap">
+              <div
+                class="d-flex w-100 justify-content-between py-1 border-top py-5 flex-column flex-md-row"
+              >
+                <div class="d-flex align-items-center ps-md-5 mx-auto mx-md-0">
+                  <span class="text-gray-700">Show </span>
+                  <select
+                    class="form-select w-65px form-select-sm mx-4 border border-1 border-gray-300"
+                  >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                  </select>
+                  <span class="text-gray-700"> per page</span>
+                </div>
+                <div class="d-flex align-items-center pe-md-5 flex-column flex-md-row">
+                  <span class="text-gray-700 me-2 my-4 my-md-0">1-10 of 52</span>
+
+                  <ul class="pagination">
+                    <li class="page-item previous disabled">
+                      <a class="page-link cursor-pointer">
+                        <i class="fa fa-left-long"></i>
+                      </a>
+                    </li>
+
+                    <li class="page-item active">
+                      <a class="page-link cursor-pointer"> 1 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 2 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 3 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 4 </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link cursor-pointer"> 5 </a>
+                    </li>
+
+                    <li class="page-item next">
+                      <a class="page-link cursor-pointer">
+                        <i class="fa fa-right-long"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- begin::Table container -->
+              <div class="table-responsive w-100">
+                <!-- begin::Table -->
+                <table
+                  class="table table-bordered table-row-gray-100 align-middle gs-0 gy-3 table-hover mb-0"
+                >
+                  <!-- begin::Table head -->
+                  <thead>
+                    <tr class="text-gray-700">
+                      <th class="w-50px border-left-0"></th>
+                      <th class="w-90px border-right-0 fw-normal text-gray-700">Date</th>
+                      <th class="w-70px border-left-0 fw-normal text-gray-700">Time</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Pickup</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Drop off</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Passenger</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Amount Charged</th>
+                      <th class="min-w-120px fw-normal text-gray-700">Status</th>
+                      <th class="min-w-100px pe-3 border-right-0 fw-normal text-gray-700">
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <!-- end::Table head -->
+                  <!-- begin::Table body -->
+                  <tbody>
+                    <tr>
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">15:30</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          Terminal 5 Heathrow
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap">
+                          Picadilly ,London SW1A 1AA
+                        </span>
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        John Travalta
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £12.00
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center"
+                          >Completed</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">17:45</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        Jimmy Hendric
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £12.00
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center"
+                          >Completed</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">17:45</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        Kate Mass
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £23.45
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center"
+                          >Completed</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-bottom-0">
+                      <td class="border-left-0 px-5">
+                        <div class="form-check form-check-sm form-check-custom">
+                          <input
+                            class="form-check-input widget-13-check"
+                            type="checkbox"
+                            value="1"
+                          />
+                        </div>
+                      </td>
+                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap">06:00</td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          The Ritz Hotels
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td>
+                        <a
+                          href="#"
+                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                        >
+                          Terminal 5 Heathrow
+                        </a>
+                        <span class="text-gray-600 d-block text-nowrap"
+                          >Picadilly ,London SW1A 1AA</span
+                        >
+                      </td>
+                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                        Bjorn Born
+                      </td>
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                        £1234.00
+                      </td>
+                      <td class="text-center">
+                        <span
+                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center"
+                          >Completed</span
+                        >
+                      </td>
+                      <td class="text-center pe-3 border-right-0">
+                        <a
+                          href="#"
+                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                        >
+                          <i class="fa fa-ellipsis-vertical"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <!-- end::Table body -->
+                </table>
+                <!-- end::Table -->
+              </div>
+              <!-- end::Table container -->
+            </div>
+            <!-- begin::Body -->
+          </div>
+        </div>
+        <div class="row border rounded rounded-4 mb-5">
+          <div class="card-header p-5 d-flex flex-stack w-100">
+            <h4 class="mb-0">FAQ</h4>
+            <i class="fa fa-minus opacity-25 fs-6"></i>
+          </div>
+          <div class="card-body px-5 py-3">
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-0')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-0"
+                aria-expanded="true"
+                aria-controls="collapse-0"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    What is
+                    <span class="text-primary fw-medium"
+                      >Book by Destination</span
+                    >
+                    or
+                    <span class="text-primary fw-medium">Book by Hour</span> ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-0" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-1')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-1"
+                aria-expanded="true"
+                aria-controls="collapse-1"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    How can i receive updates for my booking requests ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-1" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-2')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-2"
+                aria-expanded="true"
+                aria-controls="collapse-2"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">How can i make changes to my booking ?</p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-2" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-3')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-3"
+                aria-expanded="true"
+                aria-controls="collapse-3"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">How can i contact you ?</p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-3" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1 border-bottom">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-4')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-4"
+                aria-expanded="true"
+                aria-controls="collapse-4"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    Are we going to be charged for any cancellation ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-4" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-1">
+              <div
+                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                role="button"
+                (click)="collapse('collapse-5')"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-5"
+                aria-expanded="true"
+                aria-controls="collapse-5"
+              >
+                <div class="card-title m-0 d-flex flex-stack w-100">
+                  <p class="m-0">
+                    How to lock  access for a secondary user for leaving my Venue team ?
+                  </p>
+                  <i class="fa fa-plus fs-6"></i>
+                </div>
+              </div>
+
+              <div id="collapse-5" class="collapse">
+                <div class="card-body p-3">
+                  <div class="notice d-flex mb-9 p-6">
+                    <div class="d-flex flex-stack flex-grow-1">
+                      <div class="fw-bold">
+                        <div class="fs-6 text-gray-600">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Beatae architecto delectus dolore iure ad,
+                          soluta asperiores doloribus dolorem est similique
+                          totam veritatis aperiam ducimus ab optio consequatur
+                          excepturi incidunt, neque explicabo culpa, cumque sed
+                          dolores. Asperiores, sit consequuntur! Aspernatur
+                          veritatis enim fugiat ipsum. Dolor eveniet consequatur
+                          consectetur, exercitationem iure fugit.
+                          <a href="#" class="fw-bolder"> Learn More </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row flex-column flex-md-row gap-7">
+          <div class="col card px-0">
+            <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
+              <div>
+                <h5>Questions?</h5>
+                <p>Visit our Help Center for detailed assistance on Bookings ,Payments and more information. </p>
+              </div>
+              <span
+                [inlineSVG]="'./assets/media/icons/custom/footer001.svg'"
+                class="w-100 text-center"
+              ></span>
+            </div>
+            <div class="card-footer px-5 py-3 text-center">
+              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary">Go to Help Center</span>
+            </div>
+          </div>
+          <div class="col card px-0">
+            <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
+              <div>
+                <h5>Contact Support</h5>
+                <p>Need assistance? Contact our support team for prompt, personalized help your queries & concerns.</p>
+              </div>
+              <span
+                [inlineSVG]="'./assets/media/icons/custom/footer002.svg'"
+                class="w-100 text-center"
+              ></span>
+            </div>
+            <div class="card-footer px-5 py-3 text-center">
+              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary">Contact Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end::Toolbar -->
+    </div>
+  </div>
+  <!-- end::Body -->
+</div>

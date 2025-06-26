@@ -96,7 +96,9 @@
 
 	&:hover:not(.active):not(.offset):not(.disabled) {
 		.page-link {
-			color: var(--#{$prefix}pagination-hover-color);
+			color: var(--#{$prefix}gray-800);
+			background-color: var(--#{$prefix}gray-200);
+			font-weight: 600;
 			
 			&.page-text {
 				background-color: transparent;	
@@ -104,7 +106,7 @@
 
 			.svg-icon,
 			i {
-				color: var(--#{$prefix}pagination-hover-color);
+				color: var(--#{$prefix}gray-800);
 			}
 
 			.previous {
@@ -120,7 +122,9 @@
 
 	&.active {
 		.page-link {
-			color: var(--#{$prefix}pagination-active-color);
+			color: var(--#{$prefix}gray-800);
+			background-color: var(--#{$prefix}gray-200);
+			font-weight: 600;
 
 			&.page-text {
 				background-color: transparent;	

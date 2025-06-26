@@ -12,6 +12,7 @@ import { TranslationModule } from '../../modules/i18n';
 import { LayoutComponent } from './layout.component';
 import { ExtrasModule } from '../partials/layout/extras/extras.module';
 import { Routing } from '../../pages/routing';
+import { Routing as VenueRouting } from '../../venue-modern/routing';
 import { AsideComponent } from './components/aside/aside.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContentComponent } from './components/content/content.component';
@@ -31,6 +32,11 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: Routing,
+  },
+  {
+    path: 'venue-modern',
+    component: LayoutComponent,
+    children: VenueRouting,
   },
 ];
 
