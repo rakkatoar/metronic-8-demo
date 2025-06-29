@@ -54,7 +54,7 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     // build view by layout config settings
     this.asideDisplay = this.layout.getProp('aside.display') as boolean;
     this.toolbarDisplay = this.layout.getProp('toolbar.display') as boolean;
-    this.contentContainerClasses = this.layout.getStringCSSClasses('contentContainer');
+    this.contentContainerClasses = this.layout.getStringCSSClasses('fluid');
     this.asideCSSClasses = this.layout.getStringCSSClasses('aside');
     this.headerCSSClasses = this.layout.getStringCSSClasses('header');
     this.headerHTMLAttributes = this.layout.getHTMLAttributes('headerMenu');

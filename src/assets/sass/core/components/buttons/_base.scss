@@ -9,10 +9,6 @@
 	// Reset outline
 	outline: none !important;	
 
-	&.min-width{
-		min-width: 140px;
-	}
-
 	// Reset focus shadow
 	&:not(.btn-shadow):not(.shadow):not(.shadow-sm):not(.shadow-lg):not(.shadow-xs) {
 		box-shadow: none;

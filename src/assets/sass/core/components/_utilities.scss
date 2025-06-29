@@ -3,132 +3,235 @@
 //
 
 $utilities: map-merge(
-    $utilities,
-    (
-        "cursor": (
-            property: cursor,
-            values: help wait crosshair not-allowed zoom-in grab pointer
-        ),
-        "position": (
-            property: position,
-            responsive: true,
-            values: static relative absolute fixed sticky
-        ),
-        "overflow": (
-            property: overflow,
-            responsive: true,
-            values: auto hidden visible scroll,
-        ),
-        "opacity": (
-            property: opacity,
-            class: opacity,
-            values: $opacity-values
-        ),
-        "opacity-hover": (
-            property: opacity,
-            state: hover,
-            class: opacity,
-            values: $opacity-values
-        ),
-        "font-size": (
-            rfs: true,
-            responsive: true,
-            property: font-size,
-            class: fs,
-            values: $font-sizes
-        ),
-        "width": (
-            responsive: true,
-            property: width,
-            class: w,
-            values: $custom-sizes
-        ),
-        "max-width": (
-            responsive: true,
-            property: max-width,
-            class: mw,
-            values: $custom-sizes
-        ),
-        "min-width": (
-            responsive: true,
-            property: min-width,
-            class: min-w,
-            values: $custom-sizes
-        ),
-        "height": (
-            responsive: true,
-            property: height,
-            class: h,
-            values: $custom-sizes
-        ),
-        "max-height": (
-            responsive: true,
-            property: max-height,
-            class: mh,
-            values: $custom-sizes
-        ),
-        "min-height": (
-            responsive: true,
-            property: min-height,
-            class: min-h,
-            values: $custom-sizes
-        ),
-        "z-index": (
-            property: z-index,
-            class: z-index,
-            values: $zindex-values
-        ),
-        "border-top-width": (
-            property: border-top-width,
-            class: border-top,
-            values: $border-widths
-        ),
-        "border-bottom-width": (
-            property: border-bottom-width,
-            class: border-bottom,
-            values: $border-widths
-        ),
-        "border-right-width": (
-            property: border-right-width,
-            class: border-right,
-            values: $border-widths
-        ),
-        "border-left-width": (
-            property: border-left-width,
-            class: border-left,
-            values: $border-widths
-        ),
-        "line-height": (
-            property: line-height,
-            class: lh,
-            values: (
-                0: 0,
-                1: 1,
-                sm: $line-height-sm,
-                base: $line-height-base,
-                lg: $line-height-lg,
-                xl: $line-height-xl,
-                xxl: $line-height-xxl
-            )
-        ),
-        "letter-spacing": (
-            property: letter-spacing,
-            class: ls,
-            values: $letter-spacing-values
-        ),
-        "rounded": (
-            property: border-radius,
-            class: rounded,
-            values: (
-                null: $border-radius,
-                0: 0,
-                1: $border-radius-sm,
-                2: $border-radius,
-                3: $border-radius-lg,
-                4: $border-radius-xl,
-                circle: 50%,
-                pill: $border-radius-pill
-            )
-        )
-    )
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      values: help wait crosshair not-allowed zoom-in grab pointer,
+    ),
+    "position": (
+      property: position,
+      responsive: true,
+      values: static relative absolute fixed sticky,
+    ),
+    "overflow": (
+      property: overflow,
+      responsive: true,
+      values: auto hidden visible scroll,
+    ),
+    "opacity": (
+      property: opacity,
+      class: opacity,
+      values: $opacity-values,
+    ),
+    "opacity-hover": (
+      property: opacity,
+      state: hover,
+      class: opacity,
+      values: $opacity-values,
+    ),
+    "font-size": (
+      rfs: true,
+      responsive: true,
+      property: font-size,
+      class: fs,
+      values: $font-sizes,
+    ),
+    "width": (
+      responsive: true,
+      property: width,
+      class: w,
+      values: $custom-sizes,
+    ),
+    "max-width": (
+      responsive: true,
+      property: max-width,
+      class: mw,
+      values: $custom-sizes,
+    ),
+    "min-width": (
+      responsive: true,
+      property: min-width,
+      class: min-w,
+      values: $custom-sizes,
+    ),
+    "height": (
+      responsive: true,
+      property: height,
+      class: h,
+      values: $custom-sizes,
+    ),
+    "max-height": (
+      responsive: true,
+      property: max-height,
+      class: mh,
+      values: $custom-sizes,
+    ),
+    "min-height": (
+      responsive: true,
+      property: min-height,
+      class: min-h,
+      values: $custom-sizes,
+    ),
+    "z-index": (
+      property: z-index,
+      class: z-index,
+      values: $zindex-values,
+    ),
+    "border-top-width": (
+      property: border-top-width,
+      class: border-top,
+      values: $border-widths,
+    ),
+    "border-bottom-width": (
+      property: border-bottom-width,
+      class: border-bottom,
+      values: $border-widths,
+    ),
+    "border-right-width": (
+      property: border-right-width,
+      class: border-right,
+      values: $border-widths,
+    ),
+    "border-left-width": (
+      property: border-left-width,
+      class: border-left,
+      values: $border-widths,
+    ),
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        0: 0,
+        1: 1,
+        sm: $line-height-sm,
+        base: $line-height-base,
+        lg: $line-height-lg,
+        xl: $line-height-xl,
+        xxl: $line-height-xxl,
+      ),
+    ),
+    "letter-spacing": (
+      property: letter-spacing,
+      class: ls,
+      values: $letter-spacing-values,
+    ),
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        4: $border-radius-xl,
+        8px: $border-radius-8px,
+        circle: 50%,
+        pill: $border-radius-pill,
+      ),
+    ),
+    "p": (
+      property: padding,
+      class: p,
+      values: (
+        6px: $padding-6px,
+        20px: $padding-20px,
+      ),
+    ),
+    "pt": (
+      property: padding-top,
+      class: pt,
+      values: (
+        20px: $padding-20px,
+        30px: $padding-30px,
+      ),
+    ),
+    "pb": (
+      property: padding-bottom,
+      class: pb,
+      values: (
+        10px: $padding-10px,
+        11px: $padding-11px,
+        20px: $padding-20px,
+      ),
+    ),
+    "ps": (
+      property: padding-left,
+      class: ps,
+      values: (
+        5px: $padding-5px,
+        20px: $padding-20px,
+        30px: $padding-30px,
+      ),
+    ),
+    "pe": (
+      property: padding-right,
+      class: pe,
+      responsive: true,
+      values: (
+        5px: $padding-5px,
+        10px: $padding-10px,
+        20px: $padding-20px,
+        40px: $padding-40px,
+        50px: $padding-50px,
+      ),
+    ),
+    "px": (
+      property: padding-left padding-right,
+      class: px,
+      responsive: true,
+      values: (
+        10px: $padding-10px,
+        20px: $padding-20px,
+        30px: $padding-30px,
+        40px: $padding-40px,
+      ),
+    ),
+    "py": (
+      property: padding-top padding-bottom,
+      class: py,
+      values: (
+        8px: $padding-8px,
+        9px: $padding-9px,
+        14px: $padding-14px,
+        30px: $padding-30px,
+      ),
+    ),
+    "mb": (
+      property: margin-bottom,
+      class: mb,
+      values: (
+        10px: $margin-10px,
+        12px: $margin-12px,
+        20px: $margin-20px,
+      ),
+    ),
+    "gap-x": (
+      property: column-gap,
+      class: gap-x,
+      values: (
+        10px: $gap-10px,
+        16px: $gap-16px,
+        30px: $gap-30px,
+      ),
+    ),
+    "gap": (
+      property: column-gap row-gap,
+      class: gap,
+      responsive: true,
+      values: (
+        4px: $gap-4px,
+        14px: $gap-14px,
+        30px: $gap-30px,
+      ),
+    ),
+    "left": (
+      property: left,
+      class: left,
+      values: (
+        10px: $left-10px,
+      ),
+    ),
+  )
 );

@@ -1,6 +1,6 @@
-<div class="card card-custom p-5 rounded-4">
-  <div class="d-flex justify-content-between align-item-start px-5 pt-5 flex-column flex-md-row">
-    <nav aria-label="breadcrumb" class="mb-4 mb-md-0">
+<div class="card card-custom rounded-0">
+  <div class="d-flex justify-content-between align-item-start ps-20px pe-20px pe-md-40px pt-20px flex-column flex-md-row">
+    <nav aria-label="breadcrumb" class="mb-4 mb-md-0 fs-14 px-10px">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="#" class="text-gray-700 text-hover-primary"
@@ -12,16 +12,15 @@
         </li>
       </ol>
     </nav>
-    <div class="d-flex justify-content-between align-item-start gap-5">
+    <div class="d-flex justify-content-between align-item-start gap-14px">
       <div
         class="btn btn-icon btn-active-light-primary btn-custom position-relative"
         [ngClass]="'w-30px h-30px w-md-40px h-md-40px'"
         id="kt_drawer_chat_toggle"
       >
         <span
-          [inlineSVG]="'./assets/media/icons/custom/magnifier002.svg'"
-          class="svg-icon opacity-25"
-          [ngClass]="'svg-icon-1'"
+          [inlineSVG]="'./assets/media/icons/custom/magnifier001.svg'"
+          class="svg-icon opacity-25 svg-icon-20"
         ></span>
       </div>
       <div
@@ -31,8 +30,7 @@
       >
         <span
           [inlineSVG]="'./assets/media/icons/custom/notification001.svg'"
-          class="svg-icon"
-          [ngClass]="'svg-icon-1'"
+          class="svg-icon svg-icon-20"
         ></span>
       </div>
       <div
@@ -42,8 +40,7 @@
       >
         <span
           [inlineSVG]="'./assets/media/icons/custom/message001.svg'"
-          class="svg-icon"
-          [ngClass]="'svg-icon-1'"
+          class="svg-icon svg-icon-20"
         ></span>
       </div>
       <div
@@ -53,15 +50,13 @@
       >
         <span
           [inlineSVG]="'./assets/media/icons/custom/element001.svg'"
-          class="svg-icon"
-          [ngClass]="'svg-icon-1'"
+          class="svg-icon svg-icon-20"
         ></span>
       </div>
-      <div class="d-flex flex-row gap-5 gap-md-0 flex-md-column align-items-center">
+      <div class="d-flex flex-row flex-md-column align-items-center gap-14px gap-md-4px">
         <div>
           <div
-            class="symbol symbol-35px symbol-circle"
-            style="border: 1px solid #17c653"
+            class="symbol symbol-35px symbol-circle border border-success"
           >
             <img alt="Pic" src="./assets/media/avatars/300-1.jpg" />
           </div>
@@ -73,8 +68,7 @@
         >
           <span
             [inlineSVG]="'./assets/media/icons/custom/leftArrow001.svg'"
-            class="svg-icon"
-            [ngClass]="'svg-icon-1'"
+            class="svg-icon svg-icon-18 w-30px h-30px border border-grey-200 rounded-8px p-6px"
           ></span>
         </div>
       </div>
@@ -82,49 +76,49 @@
   </div>
 
   <!-- begin::Header -->
-  <div class="card-header card-header-stretch overflow-auto">
+  <div class="card-header min-h-unset px-40px mt-0 mt-md-n6">
     <ul
-      class="nav nav-stretch nav-line-tabs fw-bold border-transparent flex-nowrap"
+      class="nav nav-stretch nav-line-tabs fw-bold border-transparent flex-nowrap fs-14 gap-x-10px"
       role="tablist"
     >
       <li class="nav-item">
         <a
-          class="nav-link cursor-pointer text-hover-primary"
+          class="nav-link cursor-pointer text-hover-primary px-10px pb-20px m-0"
           [ngClass]="{ active: activeTab === 'Dashboard' }"
           (click)="setActiveTab('Dashboard')"
           role="tab"
         >
           Dashboard
-          <i class="fa fa-chevron-down fs-5 ps-2"></i>
+          <i class="fa fa-chevron-down fs-sm ps-2"></i>
         </a>
       </li>
       <li class="nav-item">
         <a
-          class="nav-link cursor-pointer text-hover-primary"
+          class="nav-link cursor-pointer text-hover-primary px-10px pb-20px m-0"
           [ngClass]="{ active: activeTab === 'BookingRecords' }"
           (click)="setActiveTab('BookingRecords')"
           role="tab"
         >
           Booking Records
-          <i class="fa fa-chevron-down fs-5 ps-2"></i>
+          <i class="fa fa-chevron-down fs-sm ps-2"></i>
         </a>
       </li>
     </ul>
   </div>
   <!-- end::Header -->
   <!-- begin::Body -->
-  <div class="card-body">
-    <div class="tab-content pt-3">
+  <div class="card-body px-20px px-md-40px pt-30px">
+    <div class="tab-content">
       <!-- begin::Header -->
       <div class="tab-pane" [ngClass]="{ active: activeTab === 'Dashboard' }">
-        <div class="row flex-column flex-md-row">
+        <div class="d-flex flex-column flex-md-row flex-stack mb-20px">
           <div class="col">
-            <h3>The Ritz Hotel</h3>
-            <p class="text-gray-700">WAYS Chauffeur Bookings Dashboard</p>
+            <p class="fs-20 fw-bold mb-0">The Ritz Hotel</p>
+            <p class="text-gray-700 fs-14 mb-4 mb-md-0">WAYS Chauffeur Bookings Dashboard</p>
           </div>
           <div class="col text-center text-md-left">
             <button
-              class="btn btn-sm btn-primary min-width"
+              class="btn btn-sm btn-primary fs-12 min-w-140px h-30px px-10px py-9px d-flex justify-content-center align-items-center"
               id="kt_drawer_chat_toggle"
             >
               Book By Destination
@@ -132,7 +126,7 @@
           </div>
           <div class="col text-center text-md-left my-4 my-md-0">
             <button
-              class="btn btn-sm btn-primary min-width"
+              class="btn btn-sm btn-primary fs-12 min-w-140px h-30px px-10px py-9px d-flex justify-content-center align-items-center"
               id="kt_drawer_chat_toggle"
             >
               Book By Hour
@@ -140,22 +134,19 @@
           </div>
         </div>
 
-        <div class="row border rounded rounded-4 mb-5">
+        <div class="border rounded rounded-4 mb-20px">
           <!-- begin::Header -->
-          <div class="card-header border-0 pt-5 px-5">
-            <h4 class="card-title align-items-start flex-column">
-              <span class="card-label fw-bold mb-1">Booking Requests</span>
-            </h4>
+          <div class="card-header border-0 p-20px align-items-center">
+            <p class="card-label fw-bold fs-16 mb-4 mb-md-0">Booking Requests</p>
             <div class="card-toolbar my-0 w-100 w-md-auto">
               <form class="w-100 position-relative" autoComplete="off">
                 <span
-                  [inlineSVG]="'./assets/media/icons/custom/magnifier002.svg'"
-                  class="svg-icon fs-2 position-absolute top-50 ms-4 translate-middle-y"
-                  [ngClass]="'svg-icon-1'"
+                  [inlineSVG]="'./assets/media/icons/custom/magnifier001.svg'"
+                  class="svg-icon svg-icon-16 position-absolute top-50 translate-middle-y left-10px"
                 ></span>
                 <input
                   type="text"
-                  class="form-control ps-12 pe-4 rounded-5 fs-6"
+                  class="form-control rounded-5 fs-11 py-8px ps-30px pe-10px w-180px h-32px"
                   name="search"
                   placeholder="Search Venue Bookings"
                 />
@@ -164,15 +155,15 @@
           </div>
           <!-- end::Header -->
           <!-- begin::Body -->
-          <div class="card-body px-0 pt-3 pb-0">
+          <div class="card-body px-0 pb-0 pt-0">
             <div class="d-flex flex-stack flex-wrap">
               <div
-                class="d-flex w-100 justify-content-between py-1 border-top py-5 flex-column flex-md-row"
+                class="d-flex w-100 justify-content-between border-top flex-column flex-md-row px-20px py-14px"
               >
-                <div class="d-flex align-items-center ps-md-5 mx-auto mx-md-0">
+                <div class="d-flex align-items-center mx-auto mx-md-0 gap-x-10px">
                   <span class="text-gray-700">Show </span>
                   <select
-                    class="form-select w-65px form-select-sm mx-4 border border-1 border-gray-300"
+                    class="form-select w-51px form-select-sm border border-1 border-gray-300 fs-11 pe-0"
                   >
                     <option value="5">5</option>
                     <option value="10">10</option>
@@ -181,39 +172,45 @@
                   </select>
                   <span class="text-gray-700"> per page</span>
                 </div>
-                <div class="d-flex align-items-center pe-md-5 flex-column flex-md-row">
-                  <span class="text-gray-700 me-2 my-4 my-md-0">1-10 of 52</span>
+                <div class="d-flex align-items-center flex-column flex-md-row gap-x-16px">
+                  <span class="text-gray-700 my-4 my-md-0">1-10 of 52</span>
 
                   <ul class="pagination">
                     <li class="page-item previous disabled">
                       <a class="page-link cursor-pointer">
-                        <i class="fa fa-left-long"></i>
+                        <span
+                          [inlineSVG]="'./assets/media/icons/custom/next001.svg'"
+                          class="w-100 text-center svg-icon svg-icon-16"
+                        ></span>
                       </a>
                     </li>
 
                     <li class="page-item active">
-                      <a class="page-link cursor-pointer"> 1 </a>
+                      <a class="page-link cursor-pointer fs-14"> 1 </a>
                     </li>
 
                     <li class="page-item">
-                      <a class="page-link cursor-pointer"> 2 </a>
+                      <a class="page-link cursor-pointer fs-14"> 2 </a>
                     </li>
 
                     <li class="page-item">
-                      <a class="page-link cursor-pointer"> 3 </a>
+                      <a class="page-link cursor-pointer fs-14"> 3 </a>
                     </li>
 
                     <li class="page-item">
-                      <a class="page-link cursor-pointer"> 4 </a>
+                      <a class="page-link cursor-pointer fs-14"> 4 </a>
                     </li>
 
                     <li class="page-item">
-                      <a class="page-link cursor-pointer"> 5 </a>
+                      <a class="page-link cursor-pointer fs-14"> 5 </a>
                     </li>
 
                     <li class="page-item next">
                       <a class="page-link cursor-pointer">
-                        <i class="fa fa-right-long"></i>
+                        <span
+                          [inlineSVG]="'./assets/media/icons/custom/next001.svg'"
+                          class="w-100 text-center svg-icon svg-icon-16"
+                        ></span>
                       </a>
                     </li>
                   </ul>
@@ -227,25 +224,28 @@
                 >
                   <!-- begin::Table head -->
                   <thead>
-                    <tr class="text-gray-700">
+                    <tr class="text-gray-700 fs-13 h-40px">
                       <th class="w-50px border-left-0"></th>
-                      <th class="w-90px border-right-0 fw-normal text-gray-700">Date</th>
-                      <th class="w-70px border-left-0 fw-normal text-gray-700">Time</th>
-                      <th class="min-w-120px fw-normal text-gray-700">Pickup</th>
-                      <th class="min-w-120px fw-normal text-gray-700">Drop off</th>
-                      <th class="min-w-120px fw-normal text-gray-700">Passenger</th>
-                      <th class="min-w-120px fw-normal text-gray-700">Amount Charged</th>
-                      <th class="min-w-120px fw-normal text-gray-700">Status</th>
-                      <th class="min-w-100px pe-3 border-right-0 fw-normal text-gray-700">
+                      <th class="border-right-0 fw-normal text-gray-700 text-nowrap pe-5px ps-20px">Date</th>
+                      <th class="border-left-0 fw-normal text-gray-700 text-nowrap ps-5px pe-20px">Time</th>
+                      <th class="fw-normal text-gray-700 text-nowrap px-20px">Pickup</th>
+                      <th class="fw-normal text-gray-700 text-nowrap px-20px">Drop off</th>
+                      <th class="fw-normal text-gray-700 text-nowrap px-20px">Passenger</th>
+                      <th class="fw-normal text-gray-700 text-nowrap px-20px">Amount Charged</th>
+                      <th class="fw-normal text-gray-700 text-nowrap px-20px text-center">Status <span
+                [inlineSVG]="'./assets/media/icons/custom/sort001.svg'"
+                class="svg-icon svg-icon-14"
+              ></span></th>
+                      <th class="pe-3 border-right-0 fw-normal text-gray-700 text-nowrap px-20px">
                         Action
                       </th>
                     </tr>
                   </thead>
                   <!-- end::Table head -->
                   <!-- begin::Table body -->
-                  <tbody>
-                    <tr>
-                      <td class="border-left-0 px-5">
+                  <tbody class="fs-14">
+                    <tr class="h-60px">
+                      <td class="border-left-0 px-20px py-0">
                         <div class="form-check form-check-sm form-check-custom">
                           <input
                             class="form-check-input widget-13-check"
@@ -254,12 +254,12 @@
                           />
                         </div>
                       </td>
-                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
-                      <td class="border-left-0 text-nowrap">15:30</td>
-                      <td>
+                      <td class="border-right-0 text-nowrap py-0 pe-5px ps-20px">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap py-0 ps-5px pe-20px">15:30</td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           The Ritz Hotels
                         </a>
@@ -267,10 +267,10 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           Terminal 5 Heathrow
                         </a>
@@ -278,29 +278,29 @@
                           Picadilly ,London SW1A 1AA
                         </span>
                       </td>
-                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                      <td class="text-gray-800 text-hover-primary text-nowrap px-20px py-0">
                         John Travalta
                       </td>
-                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap px-20px py-0">
                         £12.00
                       </td>
-                      <td class="text-center">
+                      <td class="text-center px-20px py-0">
                         <span
-                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center"
+                          class="badge badge-light-success border border-2 fw-medium w-70px justify-content-center fs-11"
                           >Completed</span
                         >
                       </td>
-                      <td class="text-center pe-3 border-right-0">
+                      <td class="text-center pe-3 border-right-0 px-20px py-0">
                         <a
                           href="#"
-                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                          class="btn btn-icon btn-active-color-primary btn-sm w-32px h-32px"
                         >
                           <i class="fa fa-ellipsis-vertical"></i>
                         </a>
                       </td>
                     </tr>
-                    <tr>
-                      <td class="border-left-0 px-5">
+                    <tr class="h-60px">
+                      <td class="border-left-0 px-20px py-0">
                         <div class="form-check form-check-sm form-check-custom">
                           <input
                             class="form-check-input widget-13-check"
@@ -309,12 +309,12 @@
                           />
                         </div>
                       </td>
-                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
-                      <td class="border-left-0 text-nowrap">17:45</td>
-                      <td>
+                      <td class="border-right-0 text-nowrap py-0 pe-5px ps-20px">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap py-0 ps-5px pe-20px">17:45</td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           The Ritz Hotels
                         </a>
@@ -322,10 +322,10 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           The Ritz Hotels
                         </a>
@@ -333,29 +333,29 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                      <td class="text-gray-800 text-hover-primary text-nowrap px-20px py-0">
                         Jimmy Hendric
                       </td>
-                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap px-20px py-0">
                         £12.00
                       </td>
-                      <td class="text-center">
+                      <td class="text-center px-20px py-0">
                         <span
-                          class="badge badge-light-warning border border-2 fw-medium w-70px justify-content-center"
+                          class="badge badge-light-warning border border-2 fw-medium w-70px justify-content-center fs-11"
                           >Pending</span
                         >
                       </td>
-                      <td class="text-center pe-3 border-right-0">
+                      <td class="text-center pe-3 border-right-0 px-20px py-0">
                         <a
                           href="#"
-                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                          class="btn btn-icon btn-active-color-primary btn-sm w-32px h-32px"
                         >
                           <i class="fa fa-ellipsis-vertical"></i>
                         </a>
                       </td>
                     </tr>
-                    <tr>
-                      <td class="border-left-0 px-5">
+                    <tr class="h-60px">
+                      <td class="border-left-0 px-20px py-0">
                         <div class="form-check form-check-sm form-check-custom">
                           <input
                             class="form-check-input widget-13-check"
@@ -364,12 +364,12 @@
                           />
                         </div>
                       </td>
-                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
-                      <td class="border-left-0 text-nowrap">17:45</td>
-                      <td>
+                      <td class="border-right-0 text-nowrap py-0 pe-5px ps-20px">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap py-0 ps-5px pe-20px">17:45</td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           The Ritz Hotels
                         </a>
@@ -377,10 +377,10 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           The Ritz Hotels
                         </a>
@@ -388,29 +388,29 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                      <td class="text-gray-800 text-hover-primary text-nowrap px-20px py-0">
                         Kate Mass
                       </td>
-                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap px-20px py-0">
                         £23.45
                       </td>
-                      <td class="text-center">
+                      <td class="text-center px-20px py-0">
                         <span
-                          class="badge badge-light-danger border border-2 fw-medium w-70px justify-content-center"
+                          class="badge badge-light-danger border border-2 fw-medium w-70px justify-content-center fs-11"
                           >Cancelled</span
                         >
                       </td>
-                      <td class="text-center pe-3 border-right-0">
+                      <td class="text-center pe-3 border-right-0 px-20px py-0">
                         <a
                           href="#"
-                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                          class="btn btn-icon btn-active-color-primary btn-sm w-32px h-32px"
                         >
                           <i class="fa fa-ellipsis-vertical"></i>
                         </a>
                       </td>
                     </tr>
-                    <tr class="border-bottom-0">
-                      <td class="border-left-0 px-5">
+                    <tr class="border-bottom-0 h-60px">
+                      <td class="border-left-0 px-20px py-0">
                         <div class="form-check form-check-sm form-check-custom">
                           <input
                             class="form-check-input widget-13-check"
@@ -419,12 +419,12 @@
                           />
                         </div>
                       </td>
-                      <td class="border-right-0 text-nowrap">12-Apr-25</td>
-                      <td class="border-left-0 text-nowrap">06:00</td>
-                      <td>
+                      <td class="border-right-0 text-nowrap py-0 pe-5px ps-20px">12-Apr-25</td>
+                      <td class="border-left-0 text-nowrap py-0 ps-5px pe-20px">06:00</td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           The Ritz Hotels
                         </a>
@@ -432,10 +432,10 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td>
+                      <td class="px-20px py-0">
                         <a
                           href="#"
-                          class="text-gray-900 fw-bold text-hover-primary d-block mb-1 text-nowrap"
+                          class="text-gray-900 fw-bold text-hover-primary d-block text-nowrap fs-16 mb-10px"
                         >
                           Terminal 5 Heathrow
                         </a>
@@ -443,22 +443,22 @@
                           >Picadilly ,London SW1A 1AA</span
                         >
                       </td>
-                      <td class="text-gray-800 text-hover-primary text-nowrap">
+                      <td class="text-gray-800 text-hover-primary text-nowrap px-20px py-0">
                         Bjorn Born
                       </td>
-                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap">
+                      <td class="text-gray-800 text-hover-primary fw-medium text-nowrap px-20px py-0">
                         £1234.00
                       </td>
-                      <td class="text-center">
+                      <td class="text-center px-20px py-0">
                         <span
-                          class="badge badge-light-primary border border-2 fw-medium w-70px justify-content-center"
+                          class="badge badge-light-primary border border-2 fw-medium w-70px justify-content-center fs-11"
                           >Finalized</span
                         >
                       </td>
-                      <td class="text-center pe-3 border-right-0">
+                      <td class="text-center border-right-0 px-20px py-0">
                         <a
                           href="#"
-                          class="btn btn-icon btn-active-color-primary btn-sm me-1"
+                          class="btn btn-icon btn-active-color-primary btn-sm w-32px h-32px"
                         >
                           <i class="fa fa-ellipsis-vertical"></i>
                         </a>
@@ -474,15 +474,15 @@
             <!-- begin::Body -->
           </div>
         </div>
-        <div class="row border rounded rounded-4 mb-5">
-          <div class="card-header p-5 d-flex flex-stack w-100">
-            <h4 class="mb-0">FAQ</h4>
-            <i class="fa fa-minus opacity-25 fs-6"></i>
+        <div class="border rounded rounded-4 mb-20px">
+          <div class="card-header d-flex flex-stack w-100 px-30px pt-20px pb-11px">
+            <p class="mb-0 fs-16px fw-bold">FAQ</p>
+            <i class="bi bi-dash opacity-25 fs-18"></i>
           </div>
-          <div class="card-body px-5 py-3">
-            <div class="mt-1 border-bottom">
+          <div class="card-body px-30px pb-10px pt-0">
+            <div class="border-bottom">
               <div
-                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                class="d-flex align-items-center collapsible toggle mb-0 h-md-56px"
                 role="button"
                 (click)="collapse('collapse-0')"
                 data-bs-toggle="collapse"
@@ -491,15 +491,15 @@
                 aria-controls="collapse-0"
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
-                  <p class="m-0">
+                  <p class="m-0 fs-16">
                     What is
-                    <span class="text-primary fw-medium"
+                    <span class="text-primary"
                       >Book by Destination</span
                     >
                     or
-                    <span class="text-primary fw-medium">Book by Hour</span> ?
+                    <span class="text-primary">Book by Hour</span> ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-18"></i>
                 </div>
               </div>
 
@@ -525,9 +525,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-1 border-bottom">
+            <div class="border-bottom">
               <div
-                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                class="d-flex align-items-center collapsible toggle mb-0 h-md-56px"
                 role="button"
                 (click)="collapse('collapse-1')"
                 data-bs-toggle="collapse"
@@ -536,10 +536,10 @@
                 aria-controls="collapse-1"
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
-                  <p class="m-0">
+                  <p class="m-0 fs-16">
                     How can i receive updates for my booking requests ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-18"></i>
                 </div>
               </div>
 
@@ -565,9 +565,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-1 border-bottom">
+            <div class="border-bottom">
               <div
-                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                class="d-flex align-items-center collapsible toggle mb-0 h-md-56px"
                 role="button"
                 (click)="collapse('collapse-2')"
                 data-bs-toggle="collapse"
@@ -576,8 +576,8 @@
                 aria-controls="collapse-2"
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
-                  <p class="m-0">How can i make changes to my booking ?</p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <p class="m-0 fs-16">How can i make changes to my booking ?</p>
+                  <i class="bi bi-plus fs-18"></i>
                 </div>
               </div>
 
@@ -603,9 +603,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-1 border-bottom">
+            <div class="border-bottom">
               <div
-                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                class="d-flex align-items-center collapsible toggle mb-0 h-md-56px"
                 role="button"
                 (click)="collapse('collapse-3')"
                 data-bs-toggle="collapse"
@@ -614,8 +614,8 @@
                 aria-controls="collapse-3"
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
-                  <p class="m-0">How can i contact you ?</p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <p class="m-0 fs-16">How can i contact you ?</p>
+                  <i class="bi bi-plus fs-18"></i>
                 </div>
               </div>
 
@@ -641,9 +641,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-1 border-bottom">
+            <div class="border-bottom">
               <div
-                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                class="d-flex align-items-center collapsible toggle mb-0 h-md-56px"
                 role="button"
                 (click)="collapse('collapse-4')"
                 data-bs-toggle="collapse"
@@ -652,10 +652,10 @@
                 aria-controls="collapse-4"
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
-                  <p class="m-0">
+                  <p class="m-0 fs-16">
                     Are we going to be charged for any cancellation ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-18"></i>
                 </div>
               </div>
 
@@ -681,9 +681,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-1">
+            <div>
               <div
-                class="d-flex align-items-center collapsible py-3 toggle mb-0"
+                class="d-flex align-items-center collapsible toggle mb-0 h-md-56px"
                 role="button"
                 (click)="collapse('collapse-5')"
                 data-bs-toggle="collapse"
@@ -692,11 +692,11 @@
                 aria-controls="collapse-5"
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
-                  <p class="m-0">
+                  <p class="m-0 fs-16">
                     Can I extend my Booking per Hour ,if yes i will get a
                     dsscount ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-18"></i>
                 </div>
               </div>
 
@@ -724,35 +724,35 @@
             </div>
           </div>
         </div>
-        <div class="row flex-column flex-md-row gap-7">
+        <div class="d-flex flex-column flex-md-row gap-30px">
           <div class="col card px-0">
-            <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
+            <div class="card-body py-30px ps-40px pe-50px d-flex flex-stack w-100 flex-column flex-lg-row">
               <div>
-                <h5>Questions?</h5>
-                <p>Visit our Help Center for detailed assistance on Bookings ,Payments and more information. </p>
+                <p class="fs-20 fw-medium mb-12px">Questions?</p>
+                <p class="fs-14 mb-12px">Visit our Help Center for detailed assistance on Bookings ,Payments and more information. </p>
               </div>
               <span
                 [inlineSVG]="'./assets/media/icons/custom/footer001.svg'"
                 class="w-100 text-center"
               ></span>
             </div>
-            <div class="card-footer px-5 py-3 text-center">
-              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary">Go to Help Center</span>
+            <div class="card-footer px-30px py-14px text-center">
+              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary fs-13px fw-medium">Go to Help Center</span>
             </div>
           </div>
           <div class="col card px-0">
-            <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
+            <div class="card-body py-30px ps-40px pe-50px d-flex flex-stack w-100 flex-column flex-lg-row">
               <div>
-                <h5>Contact Support</h5>
-                <p>Need assistance? Contact our support team for prompt, personalized help your queries & concerns.</p>
+                <p class="fs-20 fw-medium mb-12px">Contact Support</p>
+                <p class="fs-14 mb-12px">Need assistance? Contact our support team for prompt, personalized help your queries & concerns.</p>
               </div>
               <span
                 [inlineSVG]="'./assets/media/icons/custom/footer002.svg'"
                 class="w-100 text-center"
               ></span>
             </div>
-            <div class="card-footer px-5 py-3 text-center">
-              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary">Contact Support</span>
+            <div class="card-footer px-30px py-14px text-center">
+              <span class="border-bottom-dashed border-bottom-primary border-bottom-1 text-primary fs-13px fw-medium">Contact Support</span>
             </div>
           </div>
         </div>
@@ -795,7 +795,7 @@
             <div class="card-toolbar my-0 w-100 w-md-auto">
               <form class="w-100 position-relative" autoComplete="off">
                 <span
-                  [inlineSVG]="'./assets/media/icons/custom/magnifier002.svg'"
+                  [inlineSVG]="'./assets/media/icons/custom/magnifier001.svg'"
                   class="svg-icon fs-2 position-absolute top-50 ms-4 translate-middle-y"
                   [ngClass]="'svg-icon-1'"
                 ></span>
@@ -1145,7 +1145,7 @@
                     or
                     <span class="text-primary fw-medium">Book by Hour</span> ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-6"></i>
                 </div>
               </div>
 
@@ -1185,7 +1185,7 @@
                   <p class="m-0">
                     How can i receive updates for my booking requests ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-6"></i>
                 </div>
               </div>
 
@@ -1223,7 +1223,7 @@
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
                   <p class="m-0">How can i make changes to my booking ?</p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-6"></i>
                 </div>
               </div>
 
@@ -1261,7 +1261,7 @@
               >
                 <div class="card-title m-0 d-flex flex-stack w-100">
                   <p class="m-0">How can i contact you ?</p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-6"></i>
                 </div>
               </div>
 
@@ -1301,7 +1301,7 @@
                   <p class="m-0">
                     Are we going to be charged for any cancellation ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-6"></i>
                 </div>
               </div>
 
@@ -1341,7 +1341,7 @@
                   <p class="m-0">
                     How to lock  access for a secondary user for leaving my Venue team ?
                   </p>
-                  <i class="fa fa-plus fs-6"></i>
+                  <i class="bi bi-plus fs-6"></i>
                 </div>
               </div>
 
@@ -1373,8 +1373,8 @@
           <div class="col card px-0">
             <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
               <div>
-                <h5>Questions?</h5>
-                <p>Visit our Help Center for detailed assistance on Bookings ,Payments and more information. </p>
+                <p class="fs-20 fw-medium">Questions?</p>
+                <p class="fs-14">Visit our Help Center for detailed assistance on Bookings ,Payments and more information. </p>
               </div>
               <span
                 [inlineSVG]="'./assets/media/icons/custom/footer001.svg'"
@@ -1389,7 +1389,7 @@
             <div class="card-body p-10 d-flex flex-stack w-100 flex-column flex-lg-row">
               <div>
                 <h5>Contact Support</h5>
-                <p>Need assistance? Contact our support team for prompt, personalized help your queries & concerns.</p>
+                <p class="fs-14">Need assistance? Contact our support team for prompt, personalized help your queries & concerns.</p>
               </div>
               <span
                 [inlineSVG]="'./assets/media/icons/custom/footer002.svg'"

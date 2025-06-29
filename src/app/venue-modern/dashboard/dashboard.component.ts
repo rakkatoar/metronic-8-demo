@@ -39,8 +39,8 @@ export class DashboardComponent implements OnInit {
     const div = document.querySelector(`div[aria-controls="${id}"]`);
     const icon = div?.querySelector('i');
     if (icon) {
-      icon.classList.toggle('fa-plus');
-      icon.classList.toggle('fa-minus');
+      icon.classList.toggle('bi-plus');
+      icon.classList.toggle('bi-dash');
     }
     document.getElementById(id)?.classList.toggle('show')
   }

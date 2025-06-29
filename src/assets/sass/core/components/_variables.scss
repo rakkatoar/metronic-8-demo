@@ -316,6 +316,35 @@ $border-radius-lg:              .625rem !default;
 $border-radius-xl:              1rem !default;
 $border-radius-2xl:             2rem !default;
 $border-radius-pill:            50rem !default;
+$border-radius-8px: 8px !default;
+
+// padding
+$padding-5px: 5px !default;
+$padding-6px: 6px !default;
+$padding-8px: 8px !default;
+$padding-9px: 9px !default;
+$padding-10px: 10px !default;
+$padding-11px: 11px !default;
+$padding-14px: 14px !default;
+$padding-20px: 20px !default;
+$padding-30px: 30px !default;
+$padding-40px: 40px !default;
+$padding-50px: 50px !default;
+
+// gap
+$gap-4px: 4px !default;
+$gap-10px: 10px !default;
+$gap-14px: 14px !default;
+$gap-16px: 16px !default;
+$gap-30px: 30px !default;
+
+// margin
+$margin-10px: 10px !default;
+$margin-12px: 12px !default;
+$margin-20px: 20px !default;
+
+// left
+$left-10px: 10px !default;
 
 // Keenthemes hover states
 $component-hover-color: 		$primary !default;
@@ -407,6 +436,13 @@ $font-sizes: (
 	8: $font-size-base * 0.85,  // 11.05px
 	9: $font-size-base * 0.75,  // 9.75px
 	10: $font-size-base * 0.5,  // 6.50px
+	
+	11: $font-size-base * 0.8461538462,
+	12: $font-size-base * 0.9230769230,
+	14: $font-size-base * 1.0769230769,
+	16: $font-size-base * 1.2307692307,
+	18: $font-size-base * 1.3846153846,
+	20: $font-size-base * 1.5384615385,
 
 	sm: $font-size-sm,
 	base: $font-size-base, // 13px
@@ -741,7 +777,7 @@ $pagination-item-height:                            2.5rem !default;
 $pagination-item-bg:                                var(--#{$prefix}body-bg) !default;
 $pagination-item-space:                             0.5rem !default;
 $pagination-item-space-tablet-and-mobile:           0.25rem !default;
-$pagination-font-weight:                            $font-weight-semibold !default;
+$pagination-font-weight:                            $font-weight-normal !default;
 $pagination-font-size:                              $font-size-lg !default;
 $pagination-icon-font-size:                         0.85rem !default;
 $pagination-icon-height:                            $pagination-item-height * 0.35 !default;
@@ -1037,15 +1073,21 @@ $custom-sizes: (
 	8px: 8px,
 	9px: 9px,
 	10px: 10px,
+	14px: 14px,
 	15px: 15px,
+	16px: 16px,
+	18px: 18px,
 	20px: 20px,
 	25px: 25px,
 	30px: 30px,
+	32px: 32px,
 	35px: 35px,
 	40px: 40px,
 	45px: 45px,
 	50px: 50px,
+	51px: 51px,
 	55px: 55px,
+	56px: 56px,
 	60px: 60px,
 	65px: 65px,
 	70px: 70px,
@@ -1056,8 +1098,11 @@ $custom-sizes: (
 	95px: 95px,
 	100px: 100px,
 	125px: 125px,
+	133px: 133px,
+	140px: 140px,
 	150px: 150px,
 	175px: 175px,
+	180px: 180px,
 	200px: 200px,
 	225px: 225px,
 	250px: 250px,
