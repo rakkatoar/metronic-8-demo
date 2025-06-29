@@ -19,6 +19,7 @@
 			transition: $transition-link;
 			padding: 0.5rem 0;
 			margin: 0 1rem;
+			font-weight: 400;
 		}
 
 		// First Item
@@ -45,6 +46,7 @@
 		border-bottom: 1px solid var(--#{$prefix}primary);
 		transition: $transition-link;
 		color: var(--#{$prefix}primary);
+		font-weight: 500;
 	}
 
 	.nav-link.active i,

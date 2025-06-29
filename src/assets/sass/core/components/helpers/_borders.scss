@@ -19,6 +19,11 @@
 	}
 }
 
+// Teal border colors
+.border-teal{
+    border-color: #70D7FF !important;
+}
+
 // Hover border colors
 @each $name, $value in $theme-colors {
     .border-hover-#{$name}:hover {
